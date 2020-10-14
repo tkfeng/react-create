@@ -48,7 +48,7 @@ exports[`<HomePage /> should render and match the snapshot 1`] = `
           <input
             class="Input-sc-1jtyvx7-0 jHLgaw"
             id="username"
-            placeholder="mxstbr"
+            placeholder="tkfeng"
             type="text"
             value=""
           />

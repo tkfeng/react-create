@@ -4,6 +4,9 @@ exports[`<LocaleToggle /> should match the snapshot 1`] = `
 <div
   class="Wrapper-jhpbm2-0 eSBrok"
 >
+  <span>
+    Language
+  </span>
   <select
     class="Select-hlaakz-0 fNAyrU"
   >

@@ -1,7 +1,7 @@
 import produce from 'immer';
 
-import appReducer from '../reducer';
-import { loadRepos, reposLoaded, repoLoadingError } from '../actions';
+import appReducer from '../app.reducer';
+import { loadRepos, reposLoaded, repoLoadingError } from '../app.actions';
 
 /* eslint-disable default-case, no-param-reassign */
 describe('appReducer', () => {

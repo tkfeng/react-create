@@ -8,3 +8,7 @@
  * Follow this format:
  * export const YOUR_ACTION_CONSTANT = 'yourproject/YourContainer/YOUR_ACTION_CONSTANT';
  */
+const scope = 'react-create';
+export const LOAD_REPOS = `${scope}/App/LOAD_REPOS`;
+export const LOAD_REPOS_SUCCESS = `${scope}/App/LOAD_REPOS_SUCCESS`;
+export const LOAD_REPOS_ERROR = `${scope}/App/LOAD_REPOS_ERROR`;

@@ -9,4 +9,6 @@
  * export const YOUR_ACTION_CONSTANT = 'yourproject/YourContainer/YOUR_ACTION_CONSTANT';
  */
 
-export const CHANGE_USERNAME = 'boilerplate/Home/CHANGE_USERNAME';
+const scope = 'react-create';
+
+export const CHANGE_USERNAME = `${scope}/Home/CHANGE_USERNAME`;

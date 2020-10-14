@@ -1,6 +1,6 @@
-import { CHANGE_USERNAME } from '../constants';
+import { CHANGE_USERNAME } from '../homepage.constant';
 
-import { changeUsername } from '../actions';
+import { changeUsername } from '../homepage.action';
 
 describe('Home Actions', () => {
   describe('changeUsername', () => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import Form from '../Form';
+import Form from '../styled/Form';
 
 describe('<Form />', () => {
   it('should render an <form> tag', () => {

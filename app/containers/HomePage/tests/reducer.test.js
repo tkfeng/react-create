@@ -1,7 +1,7 @@
 import produce from 'immer';
 
-import homeReducer from '../reducer';
-import { changeUsername } from '../actions';
+import homeReducer from '../homepage.reducer';
+import { changeUsername } from '../homepage.action';
 
 /* eslint-disable default-case, no-param-reassign */
 describe('homeReducer', () => {

@@ -21,17 +21,17 @@ import {
   makeSelectLoading,
   makeSelectError,
 } from '../App/app.selector';
-import AtPrefix from './AtPrefix';
-import CenteredSection from './CenteredSection';
-import Form from './Form';
-import Input from './Input';
-import Section from './Section';
-import messages from './messages';
+import AtPrefix from './styled/AtPrefix';
+import CenteredSection from './styled/CenteredSection';
+import Form from './styled/Form';
+import Input from './styled/Input';
+import Section from './styled/Section';
+import messages from './homepage.message';
 import { loadRepos } from '../App/app.action';
-import { changeUsername } from './actions';
-import { makeSelectUsername } from './selectors';
-import reducer from './reducer';
-import saga from './saga';
+import { changeUsername } from './homepage.action';
+import { makeSelectUsername } from './homepage.selector';
+import reducer from './homepage.reducer';
+import saga from './homepage.saga';
 
 const key = 'home';
 

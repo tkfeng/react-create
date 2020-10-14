@@ -20,14 +20,14 @@ import {
   makeSelectRepos,
   makeSelectLoading,
   makeSelectError,
-} from '../App/app.selectors';
+} from '../App/app.selector';
 import AtPrefix from './AtPrefix';
 import CenteredSection from './CenteredSection';
 import Form from './Form';
 import Input from './Input';
 import Section from './Section';
 import messages from './messages';
-import { loadRepos } from '../App/app.actions';
+import { loadRepos } from '../App/app.action';
 import { changeUsername } from './actions';
 import { makeSelectUsername } from './selectors';
 import reducer from './reducer';

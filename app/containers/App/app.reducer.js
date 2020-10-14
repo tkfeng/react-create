@@ -12,7 +12,7 @@ import {
   LOAD_REPOS_SUCCESS,
   LOAD_REPOS,
   LOAD_REPOS_ERROR,
-} from './app.constants';
+} from './app.constant';
 
 // The initial state of the App
 export const initialState = {

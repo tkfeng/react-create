@@ -3,11 +3,11 @@
  */
 
 import { call, put, select, takeLatest } from 'redux-saga/effects';
-import { LOAD_REPOS } from 'containers/App/app.constants';
-import { reposLoaded, repoLoadingError } from 'containers/App/app.actions';
 
 import request from 'utils/request';
-import { makeSelectUsername } from 'containers/HomePage/selectors';
+import { LOAD_REPOS } from '../App/app.constant';
+import { reposLoaded, repoLoadingError } from '../App/app.action';
+import { makeSelectUsername } from './selectors';
 
 /**
  * Github repos request/response handler

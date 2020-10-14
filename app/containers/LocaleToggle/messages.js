@@ -8,6 +8,10 @@ import { defineMessages } from 'react-intl';
 export const scope = 'boilerplate.containers.LocaleToggle';
 
 export default defineMessages({
+  languageMessage: {
+    id: `${scope}.language.message`,
+    defaultMessage: 'Language',
+  },
   en: {
     id: `${scope}.en`,
     defaultMessage: 'en',

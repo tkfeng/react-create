@@ -8,6 +8,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
+import { FormattedMessage } from 'react-intl';
 
 import Toggle from 'components/Toggle';
 import Wrapper from './Wrapper';
@@ -19,6 +20,7 @@ import { makeSelectLocale } from '../LanguageProvider/selectors';
 export function LocaleToggle(props) {
   return (
     <Wrapper>
+      <FormattedMessage {...messages.languageMessage} />
       <Toggle
         value={props.locale}
         values={appLocales}

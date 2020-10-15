@@ -12,10 +12,10 @@ import { FormattedNumber } from 'react-intl';
 
 import ListItem from 'components/ListItem';
 import { makeSelectCurrentUser } from '../App/app.selector';
-import IssueIcon from './IssueIcon';
-import IssueLink from './IssueLink';
-import RepoLink from './RepoLink';
-import Wrapper from './Wrapper';
+import IssueIcon from './styled/IssueIcon';
+import IssueLink from './styled/IssueLink';
+import RepoLink from './styled/RepoLink';
+import Wrapper from './styled/Wrapper';
 
 export function RepoListItem(props) {
   const { item } = props;

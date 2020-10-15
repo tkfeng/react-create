@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import ListItemTitle from '../ListItemTitle';
+import ListItemTitle from '../styled/ListItemTitle';
 
 describe('<ListItemTitle />', () => {
   it('should render an <p> tag', () => {

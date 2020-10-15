@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import List from '../List';
+import List from '../styled/List';
 
 describe('<List />', () => {
   it('should render an <ul> tag', () => {

@@ -26,12 +26,12 @@ import CenteredSection from './styled/CenteredSection';
 import Form from './styled/Form';
 import Input from './styled/Input';
 import Section from './styled/Section';
-import messages from './homepage.message';
+import messages from './home.page.message';
 import { loadRepos } from '../App/app.action';
-import { changeUsername } from './homepage.action';
-import { makeSelectUsername } from './homepage.selector';
-import reducer from './homepage.reducer';
-import saga from './homepage.saga';
+import { changeUsername } from './home.page.action';
+import { makeSelectUsername } from './home.page.selector';
+import reducer from './home.page.reducer';
+import saga from './home.page.saga';
 
 const key = 'home';
 

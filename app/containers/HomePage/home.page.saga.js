@@ -7,7 +7,7 @@ import { call, put, select, takeLatest } from 'redux-saga/effects';
 import request from 'utils/request';
 import { LOAD_REPOS } from '../App/app.constant';
 import { reposLoaded, repoLoadingError } from '../App/app.action';
-import { makeSelectUsername } from './homepage.selector';
+import { makeSelectUsername } from './home.page.selector';
 
 /**
  * Github repos request/response handler

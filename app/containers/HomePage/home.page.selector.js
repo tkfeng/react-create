@@ -3,7 +3,7 @@
  */
 
 import { createSelector } from 'reselect';
-import { initialState } from './homepage.reducer';
+import { initialState } from './home.page.reducer';
 
 const selectHome = state => state.home || initialState;
 

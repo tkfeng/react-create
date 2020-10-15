@@ -8,7 +8,7 @@
  */
 
 import produce from 'immer';
-import { CHANGE_USERNAME } from './homepage.constant';
+import { CHANGE_USERNAME } from './home.page.constant';
 
 // The initial state of the App
 export const initialState = {

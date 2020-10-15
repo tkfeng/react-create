@@ -7,7 +7,7 @@ import { put, takeLatest } from 'redux-saga/effects';
 import { LOAD_REPOS } from '../../App/app.constant';
 import { reposLoaded, repoLoadingError } from '../../App/app.action';
 
-import githubData, { getRepos } from '../homepage.saga';
+import githubData, { getRepos } from '../home.page.saga';
 
 const username = 'mxstbr';
 

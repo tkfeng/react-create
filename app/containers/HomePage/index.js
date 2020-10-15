@@ -4,13 +4,14 @@
  * This is the first thing users see of our App, at the '/' route
  */
 
-import React, { useEffect, memo } from 'react';
+import React, { useEffect, useCallback, memo } from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { createStructuredSelector } from 'reselect';
+import _ from 'lodash';
 
 import { useInjectReducer } from 'utils/injectReducer';
 import { useInjectSaga } from 'utils/injectSaga';
@@ -51,6 +52,15 @@ export function HomePage({
     if (username && username.trim().length > 0) onSubmitForm();
   }, []);
 
+  // Utilize React hook useCallback to debounce submit.
+  // Every keystroke change will trigger a debounce query.
+  const delayedSubmit = useCallback(_.debounce(onSubmitForm, 500), []);
+
+  const onChangeInput = e => {
+    onChangeUsername(e);
+    delayedSubmit();
+  };
+
   const reposListProps = {
     loading,
     error,
@@ -87,7 +97,7 @@ export function HomePage({
                 type="text"
                 placeholder="tkfeng"
                 value={username}
-                onChange={onChangeUsername}
+                onChange={onChangeInput}
               />
             </label>
           </Form>

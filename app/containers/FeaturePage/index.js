@@ -8,7 +8,7 @@ import { Helmet } from 'react-helmet';
 import { FormattedMessage } from 'react-intl';
 
 import H1 from 'components/H1';
-import messages from './feature.page.message';
+import messages from './featurePage.message';
 import List from './styled/List';
 import ListItem from './styled/ListItem';
 import ListItemTitle from './styled/ListItemTitle';

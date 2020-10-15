@@ -6,7 +6,7 @@
 
 import produce from 'immer';
 
-import { CHANGE_LOCALE } from './language.provider.constant';
+import { CHANGE_LOCALE } from './languageProvider.constant';
 import { DEFAULT_LOCALE } from '../../i18n';
 
 export const initialState = {

@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect';
-import { initialState } from './language.provider.reducer';
+import { initialState } from './languageProvider.reducer';
 
 /**
  * Direct selector to the language domain

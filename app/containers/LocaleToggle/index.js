@@ -14,8 +14,8 @@ import Toggle from 'components/Toggle';
 import Wrapper from './styled/Wrapper';
 import messages from './localeToggle.message';
 import { appLocales } from '../../i18n';
-import { changeLocale } from '../LanguageProvider/language.provider.action';
-import { makeSelectLocale } from '../LanguageProvider/language.provider.selector';
+import { changeLocale } from '../LanguageProvider/languageProvider.action';
+import { makeSelectLocale } from '../LanguageProvider/languageProvider.selector';
 
 export function LocaleToggle(props) {
   return (

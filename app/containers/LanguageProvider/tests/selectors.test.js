@@ -1,4 +1,4 @@
-import { selectLanguage } from '../language.provider.selector';
+import { selectLanguage } from '../languageProvider.selector';
 
 describe('selectLanguage', () => {
   it('should select the global state', () => {

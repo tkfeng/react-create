@@ -4,7 +4,7 @@ import { browserHistory } from 'react-router-dom';
 import { render } from 'react-testing-library';
 
 import LocaleToggle, { mapDispatchToProps } from '../index';
-import { changeLocale } from '../../LanguageProvider/language.provider.action';
+import { changeLocale } from '../../LanguageProvider/languageProvider.action';
 import LanguageProvider from '../../LanguageProvider';
 
 import configureStore from '../../../configureStore';

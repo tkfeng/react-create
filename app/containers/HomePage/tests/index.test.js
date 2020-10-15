@@ -9,7 +9,7 @@ import { Provider } from 'react-redux';
 import { browserHistory } from 'react-router-dom';
 
 import { HomePage, mapDispatchToProps } from '../index';
-import { changeUsername } from '../home.page.action';
+import { changeUsername } from '../homePage.action';
 import { loadRepos } from '../../App/app.action';
 import configureStore from '../../../configureStore';
 

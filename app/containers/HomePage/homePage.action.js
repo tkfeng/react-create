@@ -15,7 +15,7 @@
  *    }
  */
 
-import { CHANGE_USERNAME } from './home.page.constant';
+import { CHANGE_USERNAME } from './homePage.constant';
 
 /**
  * Changes the input field of the form

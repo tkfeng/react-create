@@ -1,4 +1,4 @@
-import { selectHome, makeSelectUsername } from '../home.page.selector';
+import { selectHome, makeSelectUsername } from '../homePage.selector';
 
 describe('selectHome', () => {
   it('should select the home state', () => {

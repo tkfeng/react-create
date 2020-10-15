@@ -11,8 +11,8 @@ import { createSelector } from 'reselect';
 import { FormattedMessage } from 'react-intl';
 
 import Toggle from 'components/Toggle';
-import Wrapper from './Wrapper';
-import messages from './messages';
+import Wrapper from './styled/Wrapper';
+import messages from './localeToggle.message';
 import { appLocales } from '../../i18n';
 import { changeLocale } from '../LanguageProvider/language.provider.action';
 import { makeSelectLocale } from '../LanguageProvider/language.provider.selector';

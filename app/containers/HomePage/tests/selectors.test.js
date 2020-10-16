@@ -1,4 +1,5 @@
 import { selectHome, makeSelectUsername } from '../homePage.selector';
+import { initialState } from '../homePage.reducer';
 
 describe('selectHome', () => {
   it('should select the home state', () => {
@@ -9,6 +10,10 @@ describe('selectHome', () => {
       home: homeState,
     };
     expect(selectHome(mockedState)).toEqual(homeState);
+  });
+  it('should select the initial state', () => {
+    const emptyState = {};
+    expect(selectHome(emptyState)).toEqual(initialState);
   });
 });
 

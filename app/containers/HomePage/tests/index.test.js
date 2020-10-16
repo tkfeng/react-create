@@ -7,6 +7,7 @@ import { render } from 'react-testing-library';
 import { IntlProvider } from 'react-intl';
 import { Provider } from 'react-redux';
 import { browserHistory } from 'react-router-dom';
+import _ from 'lodash';
 
 import { HomePage, mapDispatchToProps } from '../index';
 import { changeUsername } from '../homePage.action';
@@ -21,6 +22,8 @@ describe('<HomePage />', () => {
   });
 
   it('should render and match the snapshot', () => {
+    jest.unmock('lodash');
+    _.debounce = jest.fn(fn => fn);
     const {
       container: { firstChild },
     } = render(
@@ -88,7 +91,7 @@ describe('<HomePage />', () => {
       it('should dispatch changeUsername when called', () => {
         const dispatch = jest.fn();
         const result = mapDispatchToProps(dispatch);
-        const username = 'mxstbr';
+        const username = 'tkfeng';
         result.onChangeUsername({ target: { value: username } });
         expect(dispatch).toHaveBeenCalledWith(changeUsername(username));
       });

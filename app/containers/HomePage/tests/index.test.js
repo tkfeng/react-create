@@ -3,7 +3,7 @@
  */
 
 import React from 'react';
-import { render } from 'react-testing-library';
+import { fireEvent, render } from 'react-testing-library';
 import { IntlProvider } from 'react-intl';
 import { Provider } from 'react-redux';
 import { browserHistory } from 'react-router-dom';
@@ -16,14 +16,14 @@ import configureStore from '../../../configureStore';
 
 describe('<HomePage />', () => {
   let store;
+  jest.unmock('lodash');
+  _.debounce = jest.fn(fn => fn);
 
   beforeAll(() => {
     store = configureStore({}, browserHistory);
   });
 
   it('should render and match the snapshot', () => {
-    jest.unmock('lodash');
-    _.debounce = jest.fn(fn => fn);
     const {
       container: { firstChild },
     } = render(
@@ -50,6 +50,26 @@ describe('<HomePage />', () => {
       </Provider>,
     );
     expect(submitSpy).toHaveBeenCalled();
+  });
+
+  it('should call onChangeUsername', () => {
+    const changeSpy = jest.fn();
+    const username = 'tkfeng';
+    const { getByDisplayValue } = render(
+      <Provider store={store}>
+        <IntlProvider locale="en">
+          <HomePage
+            username={username}
+            onChangeUsername={changeSpy}
+            onSubmitForm={() => {}}
+          />
+        </IntlProvider>
+      </Provider>,
+    );
+    // console.log(getByDisplayValue(username));
+    fireEvent.change(getByDisplayValue(username), { target: { value: 'a' } });
+    expect(changeSpy).toHaveBeenCalled();
+    // expect(getByDisplayValue(username)).not.toBeNull();
   });
 
   it('should not call onSubmitForm if username is an empty string', () => {

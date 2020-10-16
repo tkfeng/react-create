@@ -5,7 +5,7 @@
  */
 import { defineMessages } from 'react-intl';
 
-export const scope = 'boilerplate.containers.FeaturePage';
+export const scope = 'react-create.containers.FeaturePage';
 
 export default defineMessages({
   header: {

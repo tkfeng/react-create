@@ -7,6 +7,8 @@ import {
   makeSelectLocation,
 } from '../app.selector';
 
+import { initialState } from '../app.reducer';
+
 describe('selectGlobal', () => {
   it('should select the global state', () => {
     const globalState = {};
@@ -15,12 +17,17 @@ describe('selectGlobal', () => {
     };
     expect(selectGlobal(mockedState)).toEqual(globalState);
   });
+
+  it('should select the initial state', () => {
+    const emptyState = {};
+    expect(selectGlobal(emptyState)).toEqual(initialState);
+  });
 });
 
 describe('makeSelectCurrentUser', () => {
   const currentUserSelector = makeSelectCurrentUser();
   it('should select the current user', () => {
-    const username = 'mxstbr';
+    const username = 'tkfeng';
     const mockedState = {
       global: {
         currentUser: username,

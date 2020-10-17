@@ -1,11 +1,16 @@
-// import React from 'react';
-// import { render } from 'react-testing-library';
 import loadable from '../loadable';
 
-describe.only('loadable', () => {
-  it.only('should load TestLoadable', () => {
+describe('loadable', () => {
+  it('should load without fallback', () => {
     const spy = jest.fn(() => {});
     loadable(spy)();
+    expect(spy).not.toHaveBeenCalled();
+  });
+
+  it('should load with empty fallback', () => {
+    const spy = jest.fn(() => {});
+    const fallback = {};
+    loadable(spy, fallback)();
 
     expect(spy).not.toHaveBeenCalled();
   });
